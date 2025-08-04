@@ -22,6 +22,10 @@ on:
         required: true
         default: '18'
 
+env:
+  NAME: ${{ github.event.inputs.nombre }}
+  AGE: ${{ github.event.inputs.edad }}
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -45,5 +49,5 @@ jobs:
       - name: Run script
         run: node index.js
         env:
-          NAME: ${{ github.event.inputs.nombre }}
-          AGE: ${{ github.event.inputs.edad }}
+          NAME: ${{ env.NAME }}
+          AGE: ${{ env.AGE }}
