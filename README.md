@@ -1,2 +1,2 @@
 # t1action
-repo para los actions
+repo para los actions.
